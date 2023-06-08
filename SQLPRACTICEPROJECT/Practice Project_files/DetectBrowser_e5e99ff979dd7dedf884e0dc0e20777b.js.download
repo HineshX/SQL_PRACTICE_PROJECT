@@ -1,0 +1,98 @@
+var DetectBrowser = {
+    isChrome: function() {
+        //from https://stackoverflow.com/a/13348618
+        var isChromium = window.chrome;
+        var winNav = window.navigator;
+        var vendorName = winNav.vendor;
+        var isOpera = typeof window.opr !== "undefined";
+        var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+        var isIOSChrome = winNav.userAgent.match("CriOS");
+        var isYaBrowser = winNav.userAgent.indexOf("YaBrowser") > -1;
+
+        if (isIOSChrome) {
+            return false;
+        }
+        else if (
+            isChromium !== null &&
+            typeof isChromium !== "undefined" &&
+            vendorName === "Google Inc." &&
+            isOpera === false &&
+            isIEedge === false &&
+            isYaBrowser === false
+        ) {
+            return true;
+        }
+        return false;
+    },
+
+    isIosSafari: function() {
+        var userAgent = window.navigator.userAgent;
+        return (userAgent.match(/(iPod|iPhone|iPad)/) && userAgent.match(/WebKit/i) && !userAgent.match(/CriOS/i))
+    },
+
+    isYandexBrowser: function() {
+        var userAgent = window.navigator.userAgent;
+        return (userAgent.indexOf('YaBrowser') != -1) && (userAgent.indexOf('chrome') < 0);
+    },
+
+    isSafari: function() {
+        var userAgent = navigator.userAgent;
+        return !!userAgent.match(/version\/([\w.,]+) .*(safari)/i);
+    },
+
+    isFireFox: function() {
+        var userAgentString = navigator.userAgent;
+        return (userAgentString.toLocaleLowerCase().indexOf('firefox') != -1);
+    },
+
+    isOpera: function() {
+        return (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    },
+
+    isISpringMobileApp: function() {
+        var MOBILE_APP_USER_AGENT_SUBSTRING = 'ismobile'; // from legacy/lib/util/BrowserUtils.class.php
+        return navigator.userAgent.indexOf(MOBILE_APP_USER_AGENT_SUBSTRING) >= 0;
+    },
+
+    isMSOfficeApp: function() {
+        /*
+         * Перед тем, как ссылка из MS Office будет открыта в браузере по умолчанию, MS Office ее валидирует.
+         * Для этого MS Office пытается предварительно загрузить веб-страницу в IE со своим уникальным User-Agent.
+         */
+        var userAgent = window.navigator.userAgent;
+        return userAgent.match(/(ms-office|MSOffice|Microsoft Office)/)
+    },
+
+    /**
+     * Нужна синхронизация с файлом src/plugins/redirectIfUnsupportedBrowser.ts в репозитории Frontend-bff
+     */
+    isUnsupportedBrowser: function() {
+        if (DetectBrowser.isSafari()) {
+            /*
+             * Браузер Safari имеет в своем userAgent-е токены iPod|iPhone|iPad и WebKit
+             * Если не сделать проверку на версию Safari вначале, то редирект
+             * на страницу неподдерживамого браузера не произойдет (в доп. проверке supportedBrowser станет равным true).
+             */
+            return !BrowserVersion.isSupportedSafariVersion();
+        }
+
+        var supportedBrowser = DetectBrowser.isChrome()
+            || DetectBrowser.isYandexBrowser()
+            || DetectBrowser.isFireFox()
+            || DetectBrowser.isOpera()
+            || DetectBrowser.isMSOfficeApp();
+
+        if (!supportedBrowser) {
+            /*
+            * дополнительная проверка на запуск внутри WebView: страница может быть запущена в WebView (не обязательного нашего приложения),
+            * в этом случае не удается определить ни один из поддерживаемых браузеров
+            * ВАЖНО: дополнительная проверка выполняется после проверки на поддерживаемые браузеры, если не удалось определить один из браузеров; выполнение этой
+            * проверки в отрыве от проверки на поддерживаемые браузеры может дать ложные срабатывания
+            */
+            var userAgent = window.navigator.userAgent;
+            supportedBrowser = userAgent.match(/(iPod|iPhone|iPad|Android|Mac)/) && userAgent.match(/WebKit/i);
+        }
+
+        return !supportedBrowser;
+    }
+};

@@ -1,0 +1,189 @@
+/* line 3, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent .button_text .label {
+  color: #FFFFFF;
+  position: relative;
+  top: -1px;
+}
+/* line 10, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent .button_body, .button.accent.disabled.loading .button_body, .button.accent.disabled.over.loading .button_body, .button.accent.disabled.down.loading .button_body, .button.accent.disabled.fixed_down.loading .button_body {
+  background: var(--color-accent-default);
+}
+/* line 19, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent.over .button_body {
+  background: var(--color-accent-80);
+}
+/* line 24, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent.down .button_body, .button.accent.fixed_down .button_body {
+  background: var(--color-accent-dark);
+}
+/* line 30, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent.disabled .button_body, .button.accent.over.disabled .button_body, .button.accent.down.disabled .button_body, .button.accent.fixed_down.disabled .button_body {
+  background: var(--color-accent-60);
+  cursor: default;
+}
+/* line 39, ../scss/ispring-ui/component/button/color/_accent.scss */
+.button.accent .button_preloader {
+  stroke: #FFFFFF;
+}
+
+/* line 4, ../scss/ispring-ui/component/button/color/_accent_inverted.scss */
+.button.accent_inverted .button_body {
+  background: #FFFFFF;
+  border-radius: 6px;
+  border: 2px solid var(--color-accent-default);
+}
+/* line 11, ../scss/ispring-ui/component/button/color/_accent_inverted.scss */
+.button.accent_inverted .button_text .label {
+  font-size: 14px;
+  position: relative;
+  top: -1px;
+  color: var(--color-accent-default);
+}
+/* line 19, ../scss/ispring-ui/component/button/color/_accent_inverted.scss */
+.button.accent_inverted .button_preloader {
+  stroke: var(--color-accent-default);
+}
+
+/* line 3, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary .button_text .label {
+  color: var(--color-text-default);
+  position: relative;
+  top: -1px;
+}
+/* line 10, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary .button_body, .button.secondary.disabled.loading .button_body, .button.secondary.disabled.over.loading .button_body, .button.secondary.disabled.down.loading .button_body, .button.secondary.disabled.fixed_down.loading .button_body {
+  background: var(--color-surface-subdued);
+}
+/* line 19, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary.over .button_body {
+  background: var(--color-surface-hovered);
+}
+/* line 24, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary.down .button_body, .button.secondary.fixed_down .button_body {
+  background: var(--color-surface-pressed);
+}
+/* line 30, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary.disabled .button_body, .button.secondary.over.disabled .button_body, .button.secondary.down.disabled .button_body, .button.secondary.fixed_down.disabled .button_body {
+  background: var(--color-surface-disabled);
+}
+/* line 38, ../scss/ispring-ui/component/button/color/_secondary.scss */
+.button.secondary .button_preloader {
+  stroke: var(--color-text-default);
+}
+
+/* line 3, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass .button_text .label {
+  color: #FFFFFF;
+  position: relative;
+  top: -1px;
+}
+/* line 10, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass .button_body, .button.singpass.disabled.loading .button_body, .button.singpass.disabled.loading.over .button_body, .button.singpass.disabled.loading.down .button_body, .button.singpass.disabled.loading.fixed_down .button_body {
+  background: #F4333D;
+}
+/* line 19, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass.over .button_body {
+  background: #f6464f;
+}
+/* line 24, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass.down .button_body, .button.singpass.fixed_down .button_body {
+  background: #cc151c;
+}
+/* line 30, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass.disabled .button_body, .button.singpass.over.disabled .button_body, .button.singpass.down.disabled .button_body, .button.singpass.fixed_down.disabled .button_body {
+  background: var(--color-accent-60);
+  cursor: default;
+}
+/* line 39, ../scss/ispring-ui/component/button/color/custom/_singpass.scss */
+.button.singpass .button_preloader {
+  stroke: #FFFFFF;
+}
+
+/* line 5, ../scss/ispring-ui/component/menu/_horizontal_tab_menu_accent.scss */
+.horizontal_tab_menu.with_top_line.accent ul.tabs li.tab:hover,
+.horizontal_tab_menu.with_top_line.accent ul.tabs li.tab.selected {
+  border-top-color: var(--color-accent-default);
+}
+
+/* line 1, ../scss/ispring-ui/component/_progressbar_accent.scss */
+.progressbar.accent div.bar div {
+  background: var(--color-accent-default);
+}
+
+/* line 1, ../scss/ispring-ui/component/list/_list_mark_accent.scss */
+.items_list_wrapper .list_mark.accent {
+  background: var(--color-accent-default);
+}
+
+/* line 1, ../scss/ispring-ui/component/step/_step_mark_accent.scss */
+.step_mark.accent {
+  background: var(--color-accent-default);
+}
+
+/* line 3, ../scss/ispring-ui/component/_flipswitch_accent.scss */
+.flipswitch.accent:hover, .flipswitch.accent.hover {
+  background-color: #BABABA;
+}
+/* line 9, ../scss/ispring-ui/component/_flipswitch_accent.scss */
+.flipswitch.accent.checked {
+  background-color: var(--color-accent-default);
+}
+/* line 14, ../scss/ispring-ui/component/_flipswitch_accent.scss */
+.flipswitch.accent.checked:hover, .flipswitch.accent.checked.hover {
+  background-color: var(--color-accent-dark);
+}
+/* line 20, ../scss/ispring-ui/component/_flipswitch_accent.scss */
+.flipswitch.accent.disabled, .flipswitch.accent.disabled:hover, .flipswitch.accent.disabled.hover {
+  background-color: #E0E0E0;
+}
+/* line 27, ../scss/ispring-ui/component/_flipswitch_accent.scss */
+.flipswitch.accent.checked.disabled, .flipswitch.accent.checked.disabled:hover, .flipswitch.accent.checked.disabled.hover {
+  background-color: var(--color-accent-60);
+}
+
+/* line 13, ../scss/legacy_components_customization.scss */
+.customizable-svg-accent-stroke {
+  stroke: var(--color-accent-default);
+}
+
+/* line 18, ../scss/legacy_components_customization.scss */
+.customizable-svg-accent-fill {
+  fill: var(--color-accent-default);
+}
+
+/* line 23, ../scss/legacy_components_customization.scss */
+.dashboard_quick_stats .stat_container a.text_content_block_header,
+.catalog_assignment_requests a.text_content_block_header {
+  color: var(--color-accent-default);
+}
+
+/* line 32, ../scss/legacy_components_customization.scss */
+body.page .form_field_container.focus .form_field_wrapper,
+body.space .form_field_container.focus .form_field_wrapper {
+  border-color: var(--color-accent-default);
+}
+/* line 39, ../scss/legacy_components_customization.scss */
+body.page .button.white.over .button_body .button_text .label,
+body.space .button.white.over .button_body .button_text .label {
+  color: var(--color-accent-default);
+}
+/* line 44, ../scss/legacy_components_customization.scss */
+body.page .message_block a,
+body.space .message_block a {
+  color: var(--color-link-default);
+}
+/* line 49, ../scss/legacy_components_customization.scss */
+body.page .suite_trial_block a,
+body.space .suite_trial_block a {
+  color: var(--color-link-default);
+}
+
+/* line 55, ../scss/legacy_components_customization.scss */
+.fc-day-top.fc-today .fc-day-number {
+  background: var(--color-accent-default);
+}
+
+/* line 60, ../scss/legacy_components_customization.scss */
+.rate_plans_table .rate_plan_item_wrapper.recommended {
+  border-top-color: var(--color-accent-default);
+}

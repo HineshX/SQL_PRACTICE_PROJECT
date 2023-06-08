@@ -1,0 +1,181 @@
+/* Colors */
+/* color scheme */
+/* Link colors */
+/** @deprecated */
+/* List colors */
+/* Flexible dynamic list */
+/* Write message container */
+/* Questions list */
+/* Badge popup colors */
+/* Button colors */
+/* Tabs colors */
+/* Font family */
+/* Font sizes */
+/* Default items colors */
+/* Font weights */
+/* Global styles */
+/* line 2, ../../scss/ispring-ui/_global.scss */
+body,
+html,
+input,
+textarea,
+keygen,
+select,
+button {
+  font-family: "Roboto", Tahoma;
+  color: #42484E;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* line 16, ../../scss/ispring-ui/_global.scss */
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* line 21, ../../scss/ispring-ui/_global.scss */
+h1,
+.normal_title {
+  font-size: 22px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* line 29, ../../scss/ispring-ui/_global.scss */
+h2,
+.small_title {
+  font-size: 20px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* line 37, ../../scss/ispring-ui/_global.scss */
+h3,
+.smaller_title {
+  font-size: 19px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* line 45, ../../scss/ispring-ui/_global.scss */
+p,
+span,
+.item_not_active,
+.item_normal,
+.item_active {
+  font-size: 15px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* line 53, ../../scss/ispring-ui/_global.scss */
+b,
+strong {
+  font-weight: 500;
+}
+
+/* line 59, ../../scss/ispring-ui/_global.scss */
+li {
+  font-size: 15px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* line 66, ../../scss/ispring-ui/_global.scss */
+th {
+  font-weight: 500;
+}
+
+/* line 71, ../../scss/ispring-ui/_global.scss */
+label {
+  font-size: 15px;
+  color: #42484E;
+  font-weight: 400;
+}
+
+/* Style classes */
+/* line 79, ../../scss/ispring-ui/_global.scss */
+.small_text {
+  font-size: 13px;
+}
+
+/* line 84, ../../scss/ispring-ui/_global.scss */
+.description,
+.text_input_tip {
+  color: #8D98A2;
+}
+
+/* line 90, ../../scss/ispring-ui/_global.scss */
+.item_not_active {
+  color: #8D98A2;
+}
+
+/* line 96, ../../scss/ispring-ui/_global.scss */
+.item_normal {
+  color: #42484E;
+}
+
+/* line 102, ../../scss/ispring-ui/_global.scss */
+.item_active {
+  color: #42484E;
+  font-weight: 500;
+}
+
+/* line 109, ../../scss/ispring-ui/_global.scss */
+.form_field_text {
+  color: #42484E;
+}
+
+/* line 114, ../../scss/ispring-ui/_global.scss */
+.form_field_placeholder {
+  color: #8D98A2;
+}
+
+/* line 119, ../../scss/ispring-ui/_global.scss */
+.form_field_disabled {
+  color: #8D98A2;
+}
+
+/* line 124, ../../scss/ispring-ui/_global.scss */
+.date {
+  font-size: 13px;
+  color: #B8BABB;
+}
+
+/* line 130, ../../scss/ispring-ui/_global.scss */
+.tag {
+  font-weight: 500;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+/* line 137, ../../scss/ispring-ui/_global.scss */
+a {
+  color: #0075C2;
+  text-decoration: none;
+}
+
+/* line 143, ../../scss/ispring-ui/_global.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 148, ../../scss/ispring-ui/_global.scss */
+a.as_text {
+  color: #42484E;
+}
+/* line 152, ../../scss/ispring-ui/_global.scss */
+a.as_text:hover {
+  text-decoration: none;
+}
+
+/* line 4, ../../scss/print/all.scss */
+.popup_progress_icon,
+.progress_image,
+.row.list_footer.footer.content_list_footer,
+.popup.feedback_popup,
+.small_header,
+.sidebar_container,
+.global_notification_collection {
+  display: none;
+}

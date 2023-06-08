@@ -1,0 +1,4 @@
+//not presented in "javascripts.yml" due to manual usage in layout
+if (DetectBrowser.isUnsupportedBrowser()) {
+    document.location.href = document.getElementById('unsupportedBrowserPageUrl').value;
+}

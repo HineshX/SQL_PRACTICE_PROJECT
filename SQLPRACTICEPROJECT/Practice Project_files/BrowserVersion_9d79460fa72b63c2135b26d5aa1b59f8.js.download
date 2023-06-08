@@ -1,0 +1,40 @@
+var BrowserVersion = {
+    // Нужна синхронизация версий с файликом в репозитории frontend_bff src/common/browserVersion.ts
+    SAFARI_SUPPORTED_VERSION: "14.1.0",
+
+    parseVersion: function(version) {
+        return version.split('.').map(Number);
+    },
+
+    isSupportedVersion: function(currentVersion, minSupportedVersion) {
+        var parsedCurrentVersion = BrowserVersion.parseVersion(currentVersion);
+        var parsedMinSupportedVersion = BrowserVersion.parseVersion(minSupportedVersion);
+
+        for (let i = 0; i < Math.max(parsedCurrentVersion.length, parsedMinSupportedVersion.length); i++) {
+            var currentVersionNum = parsedCurrentVersion[i] || 0;
+            var minSupportedVersionNum = parsedMinSupportedVersion[i] || 0;
+            if (currentVersionNum !== minSupportedVersionNum) {
+                return currentVersionNum > minSupportedVersionNum;
+            }
+        }
+        return true
+    },
+
+    getSafariVersion: function() {
+        var userAgent = navigator.userAgent;
+        if (/Safari/.test(userAgent)) {
+            var matchVersion = userAgent.match(/Version\/([\d|.]+)/);
+            return matchVersion && matchVersion[1];
+        }
+        return null
+    },
+
+    isSupportedSafariVersion: function() {
+        var safariVersion = BrowserVersion.getSafariVersion();
+        if (safariVersion) {
+            var minSupportedVersion = BrowserVersion.SAFARI_SUPPORTED_VERSION;
+            return BrowserVersion.isSupportedVersion(safariVersion, minSupportedVersion);
+        }
+        return false;
+    },
+};
